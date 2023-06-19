@@ -13,7 +13,7 @@ const Employee = database.define(
       allowNull: false,
     },
     birth_date: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.DATE,
       allowNull: false,
     },
     gender: {
@@ -27,4 +27,5 @@ const Employee = database.define(
   },
   { tableName: "employees" },
 );
+
 module.exports = Employee;

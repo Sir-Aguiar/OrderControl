@@ -1,4 +1,5 @@
 const { DataTypes } = require("sequelize");
+const Order = require("./Order");
 const database = require("../database");
 
 const Product = database.define(
@@ -32,5 +33,7 @@ const Product = database.define(
   },
   { tableName: "products" },
 );
+
+
 
 module.exports = Product;

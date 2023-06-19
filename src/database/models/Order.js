@@ -1,4 +1,5 @@
 const { DataTypes } = require("sequelize");
+const Employee = require("./Employee");
 const database = require("../database");
 
 const Order = database.define(
@@ -24,4 +25,14 @@ const Order = database.define(
   },
   { tableName: "orders" },
 );
+
+Order.belongsTo(Employee, {
+  foreignKey: "employee_id",
+  as: "employee",
+});
+Employee.hasMany(Order, {
+  foreignKey: "employee_id",
+  as: "orders",
+});
+
 module.exports = Order;
