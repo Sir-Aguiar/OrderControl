@@ -14,7 +14,7 @@ module.exports = {
         allowNull: false,
       },
       price: {
-        type: Sequelize.INTEGER,
+        type: Sequelize.REAL,
         allowNull: false,
       },
       brand: {

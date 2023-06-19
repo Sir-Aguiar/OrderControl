@@ -8,8 +8,18 @@ module.exports = {
         autoIncrement: true,
         type: Sequelize.INTEGER,
       },
-      product_id: { type: Sequelize.INTEGER, references: { model: "products", key: "id" } },
-      order_id: { type: Sequelize.INTEGER, references: { model: "orders", key: "id" } },
+      product_id: {
+        type: Sequelize.INTEGER,
+        references: { model: "products", key: "id" },
+        allowNull: false,
+        primaryKey: true,
+      },
+      order_id: {
+        type: Sequelize.INTEGER,
+        references: { model: "orders", key: "id" },
+        allowNull: false,
+        primaryKey: true,
+      },
       created_at: {
         type: Sequelize.DATE,
         allowNull: false,
