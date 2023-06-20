@@ -10,9 +10,9 @@ const routes = require("../routes");
 
   criar venda (POST order/) ✔
   listar vendas (validação de empregado) (GET order/) ✔
-  encontrar venda (validação de empregado) (GET order/:order_id)
-  cancelar venda (DELETE order/:order_id)
-  alterar status da venda (PUT order-status/)
+  encontrar venda (validação de empregado) (GET order/:order_id) ✔
+  cancelar venda (DELETE order/:order_id) ✔
+  alterar status da venda (PUT order-status/:order_id) ✔
 */
 
 const app = express();
